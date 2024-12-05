@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #4CAF50;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            margin-bottom: 15px;
+            color: #4CAF50;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* About Me Section */
+        #about-me p {
+            margin-bottom: 15px;
+        }
+
+        /* Projects Section */
+        #projects ul {
+            list-style-type: none;
+        }
+
+        #projects li {
+            margin: 10px 0;
+        }
+
+        /* GitHub Contributions Section */
+        #github-contributions {
+            text-align: center;
+        }
+
+        #github-contributions h2 {
+            margin-bottom: 20px;
+        }
+
+        #github-calendar {
+            margin: auto;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <p>Welcome to my professional portfolio</p>
+    </header>
+
+    <nav>
+        <a href="#about-me">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#github-contributions">GitHub Contributions</a>
+    </nav>
+
+    <section id="about-me">
+        <h2>About Me</h2>
+        <p>Hello! I'm [Your Name], a passionate developer with a love for building scalable and innovative solutions. I specialize in web development, cloud computing, and software engineering.</p>
+        <p>Feel free to explore my projects and GitHub contributions below!</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <strong>Project 1:</strong> <a href="#" class="btn">View Details</a>
+            </li>
+            <li>
+                <strong>Project 2:</strong> <a href="#" class="btn">View Details</a>
+            </li>
+            <li>
+                <strong>Project 3:</strong> <a href="#" class="btn">View Details</a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="github-contributions">
+        <h2>GitHub Contributions</h2>
+        <div id="github-calendar"></div>
+        <script src="https://cdn.jsdelivr.net/npm/github-contributions-calendar@1.0.0/dist/calendar.min.js"></script>
+        <script>
+            new GitHubCalendar("#github-calendar", "Auteau-Atk");
+        </script>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
