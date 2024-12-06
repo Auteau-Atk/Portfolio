@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script type="module" defer src="https://cdn.jsdelivr.net/gh/imananoosheh/github-contributions-fetch@latest/github_calendar_widget.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <p>Welcome to my professional portfolio</p>
+        {% if email %}
+            <button id="logout-btn" class="btn">Logout</button>
+        {% else %}
+            <button id="login-btn" class="btn">Login</button>
+        {% endif %}
+    </header>
+
+    <nav>
+        <a href="#about-me">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#github-contributions">GitHub Contributions</a>
+    </nav>
+
+    <section id="about-me" class="scalable-container">
+        <h2>About Me</h2>
+        <p>Hello! I'm a developer passionate about building scalable and secure web applications. This portfolio highlights my projects and contributions to the tech community.</p>
+        <p>Feel free to explore my work or log in to edit this portfolio if you have access.</p>
+    </section>
+
+    <section id="projects" class="scalable-container">
+        <h2>Projects</h2>
+        <ul id="project-list">
+            {% for project in projects %}
+                <li>
+                    <strong>{{ project.name }}:</strong> 
+                    <span>{{ project.details }}</span>
+                    {% if email %}
+                        <button class="btn remove-project-btn" data-name="{{ project.name }}">Remove</button>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+        {% if email %}
+            <button id="add-project-btn" class="btn">Add Project</button>
+        {% endif %}
+    </section>
+
+    <section id="github-contributions" class="scalable-container">
+        <h2>GitHub Contributions</h2>
+        <div id="github-calendar">
+            <div id="calendar-component" username="YourGitHubUsername"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/button.js') }}"></script>
+
+</body>
+</html>
