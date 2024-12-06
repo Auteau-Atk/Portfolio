@@ -19,7 +19,6 @@ google = oauth.register(
     client_kwargs={'scope': 'openid profile email'},
 )
 
-# Store projects in memory for this example
 projects = [
     {"name": "Project 1", "details": "Description of Project 1"},
     {"name": "Project 2", "details": "Description of Project 2"},

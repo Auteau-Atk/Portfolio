@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #4285f4;
     color: white;
     padding: 20px;
     text-align: center;
@@ -27,7 +27,7 @@ header .btn {
     margin-top: 10px;
     padding: 10px 20px;
     background: white;
-    color: #4CAF50;
+    color: #4285f4;
     border: none;
     border-radius: 5px;
     font-weight: bold;
@@ -54,7 +54,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #4CAF50;
+    color: #4285f4;
 }
 
 section {
@@ -68,7 +68,7 @@ section {
 }
 
 section h2 {
-    color: #4CAF50;
+    color: #4285f4;
     margin-bottom: 15px;
 }
 
@@ -94,7 +94,7 @@ li strong {
 
 .btn {
     padding: 7px 15px;
-    background: #4CAF50;
+    background: #4285f4;
     color: white;
     border: none;
     border-radius: 5px;
@@ -104,7 +104,7 @@ li strong {
 }
 
 .btn:hover {
-    background: #45a049;
+    background: #4285f4;
 }
 
 #github-contributions {
